@@ -1,0 +1,72 @@
+[2018-12-13 14:45:27.450] [sharedprocess] [info] main {"machineId":"b1cde12d748700dc849b85e442915c87099b9fa122c7db889fd5bc477de557e3"}
+[2018-12-13 14:45:27.481] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:45:27.495] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:45:27.502] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:45:27.525] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:45:27.542] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:45:27.545] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:45:27.547] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:46:01.234] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:46:01.236] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:46:01.293] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:46:01.296] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:46:01.537] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:46:07.453] [sharedprocess] [info] Starting to clean up unused language packs.
+[2018-12-13 14:47:15.319] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:47:15.322] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:47:15.324] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:47:15.331] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:47:15.388] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:47:15.391] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:47:15.397] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:47:30.833] [sharedprocess] [info] Installing extension: php-debug
+[2018-12-13 14:47:30.835] [sharedprocess] [info] Scanned user extensions: 0
+[2018-12-13 14:47:31.276] [sharedprocess] [info] Downloaded extension: php-debug /tmp/e900152b-6932-40c5-8da8-42352b8fbaa0
+[2018-12-13 14:47:31.807] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.felixfbecker.php-debug-1.12.6: felixfbecker.php-debug-1.12.6
+[2018-12-13 14:47:31.808] [sharedprocess] [info] Renamed to /root/.vscode/extensions/felixfbecker.php-debug-1.12.6
+[2018-12-13 14:47:31.809] [sharedprocess] [info] Installation completed. felixfbecker.php-debug-1.12.6
+[2018-12-13 14:47:31.842] [sharedprocess] [info] Extensions installed successfully: felixfbecker.php-debug
+[2018-12-13 14:47:31.978] [sharedprocess] [info] Scanned user extensions: 1
+[2018-12-13 14:47:32.002] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:47:39.781] [sharedprocess] [info] Scanned user extensions: 1
+[2018-12-13 14:47:39.782] [sharedprocess] [info] Scanned user extensions: 1
+[2018-12-13 14:47:39.787] [sharedprocess] [info] Scanned user extensions: 1
+[2018-12-13 14:47:39.790] [sharedprocess] [info] Scanned user extensions: 1
+[2018-12-13 14:47:39.792] [sharedprocess] [info] Scanned user extensions: 1
+[2018-12-13 14:47:39.844] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:47:39.848] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:47:39.851] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:47:39.856] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:47:40.430] [sharedprocess] [info] Scanned user extensions: 1
+[2018-12-13 14:47:58.238] [sharedprocess] [info] Installing extension: vscode-phpfmt
+[2018-12-13 14:47:58.240] [sharedprocess] [info] Scanned user extensions: 1
+[2018-12-13 14:47:59.024] [sharedprocess] [info] Downloaded extension: vscode-phpfmt /tmp/8f16ca15-6174-457f-b7b0-8cfd3a8081c2
+[2018-12-13 14:47:59.090] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.kokororin.vscode-phpfmt-1.0.30: kokororin.vscode-phpfmt-1.0.30
+[2018-12-13 14:47:59.090] [sharedprocess] [info] Renamed to /root/.vscode/extensions/kokororin.vscode-phpfmt-1.0.30
+[2018-12-13 14:47:59.091] [sharedprocess] [info] Installation completed. kokororin.vscode-phpfmt-1.0.30
+[2018-12-13 14:47:59.097] [sharedprocess] [info] Extensions installed successfully: kokororin.vscode-phpfmt
+[2018-12-13 14:47:59.218] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:47:59.252] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:48:01.510] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:48:01.510] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:48:01.513] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:48:01.525] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:48:01.526] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:48:01.579] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:48:01.581] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:48:01.584] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:48:01.588] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:48:02.163] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:49:40.032] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:49:40.033] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:49:40.035] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:49:40.102] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:49:40.106] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:49:40.111] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:50:28.640] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:50:28.642] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:50:28.644] [sharedprocess] [info] Scanned user extensions: 2
+[2018-12-13 14:50:28.698] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:50:28.701] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:50:28.707] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-13 14:53:02.179] [sharedprocess] [info] Scanned user extensions: 2

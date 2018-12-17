@@ -1,0 +1,32 @@
+{
+    "telemetry.machineId": "b1cde12d748700dc849b85e442915c87099b9fa122c7db889fd5bc477de557e3",
+    "theme": "vs-dark",
+    "themeBackground": "#1e1e1e",
+    "pickerWorkingDir": "/var/www",
+    "openedPathsList": {
+        "workspaces2": [
+            "file:///var/www/html"
+        ],
+        "files2": []
+    },
+    "windowsState": {
+        "openedWindows": [],
+        "lastActiveWindow": {
+            "folderUri": {
+                "$mid": 1,
+                "fsPath": "/var/www/html",
+                "external": "file:///var/www/html",
+                "path": "/var/www/html",
+                "scheme": "file"
+            },
+            "backupPath": "/var/www/html/~/.vscode-root/Backups/40d1b2d83998fabacb726e5bc3d22129",
+            "uiState": {
+                "mode": 0,
+                "x": 63,
+                "y": 23,
+                "width": 1309,
+                "height": 749
+            }
+        }
+    }
+}
