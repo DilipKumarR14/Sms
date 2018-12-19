@@ -1,19 +1,22 @@
 <?php
-include "CheckSmsSent.php";
 include "Constant.php";
+include "otp.txt";
 class DemoSendSms
 {
     public function sendSms()
     {
         $objConst = new Constant();
-        $r = rand(1000,9999);
+        $r = rand(1000, 9999);
+        $file = fopen("otp.txt", "w");
+        $a = fwrite($file, "Your OTP Number is $r");
+        fclose($file);
         $post_data = array(
             'From' => $objConst->from,
             'To' => $objConst->to,
             'Body' => "This is a test message being sent using Exotel with a (OTP) and ($r). If this is being abused, report to 08088919888"
         );
-        $exotel_sid = $objConst->exoId; // Your Exotel SID - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
-        $exotel_token = $objConst->exoToken; // Your exotel token - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
+        $exotel_sid = $objConst->exoId;
+        $exotel_token = $objConst->exoToken;
 
         $url = "https://" . $exotel_sid . ":" . $exotel_token . "@twilix.exotel.in/v1/Accounts/" . $exotel_sid . "/Sms/send.json";
 
@@ -23,32 +26,40 @@ class DemoSendSms
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post_data));
 
         $http_result = curl_exec($ch);
-        $error = curl_error($ch);
-        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        $decode = json_decode($http_result, true);
+        $jsondecode = json_decode($http_result, true);
+        if ($jsondecode["RestException"]["Status"] != 400) {
+            $error = curl_error($ch);
+            $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            $decode = json_decode($http_result, true);
 
-        $sid = $decode['SMSMessage']['Sid'];
-        $status = $decode['SMSMessage']['Body'];
+            $sid = $decode['SMSMessage']['Sid'];
+            $status = $decode['SMSMessage']['Body'];
 
-        if ($http_code == 200) {
-            echo "SMS Sent Successfully<br>";
-            echo $http_result;
-            // print "Response = " .print_r($http_result);
-            sleep(5);
+            if ($http_code == 200) {
+                echo "SMS Sent Successfully\n";
+                echo $http_result;
+                sleep(1);
             // $res = localtime(time());
             // $res = $res[0];
             // echo $res;
-            $obj = new ChechSmsSent();
-            $obj->sendSms($sid,$r);
- 
+                include "CheckSmsSent.php";
+                $obj = new ChechSmsSent();
+                $obj->sendSms($sid, $r);
+
+            } else {
+                echo "\n SMS Sent Failed\n";
+                echo $http_result;
+            }
         } else {
-            echo " SMS Sent Failed<br>";
-            echo $http_result;
-            // print "Response = " .print_r($http_result);
+            require "/var/www/html/call/Call.php";
+            echo "\nSMS SENT FAILED\n";
+            $objCall = new Call();
+            $objCall->testCall();
         }
+
         curl_close($ch);
     }
 }
-$obj = new DemoSendSms();
-$obj->sendSms();
+$objdemo = new DemoSendSms();
+$objdemo->sendSms();
 ?>
