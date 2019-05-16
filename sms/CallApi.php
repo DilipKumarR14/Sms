@@ -7,14 +7,14 @@ class CallApi
         echo "\nCalling the Number\n";
         $objConst = new Constant();
         $post_data = array(
-            'From' =>$objConst->to,
-            'CallerId' =>$objConst->from,
-            'Url' => "http://my.exotel.com/exoteltest4/exoml/start_voice/204581"
+            'From' => $objConst->to,
+            'CallerId' => $objConst->from,
+            'Url' => "http://my.exotel.com/ex105/exoml/start_voice/30"
         );
         $exotel_sid = $objConst->exoId;
         $exotel_token = $objConst->exoToken;
 
-        $url = "https://" . $exotel_sid . ":" . $exotel_token . "@api.exotel.com/v1/Accounts/" . $exotel_sid . "/Calls/connect.json";
+        $url = "http://" . $exotel_sid . ":" . $exotel_token . "@twilix.exotel.com/v1/Accounts/" . $exotel_sid . "/Calls/connect.json";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
@@ -28,18 +28,20 @@ class CallApi
         $sid = $decode["Call"]["Sid"];
 
         // get request
-        sleep(20);
+        sleep(5);
         $objstat = new Status();
-        $result = $objstat->stat($exotel_sid,$exotel_token,$sid);
-        
+        $result = $objstat->stat($exotel_sid, $exotel_token, $sid);
+
 
         if ($result == "completed") {
             echo "\nSuccess Call\n";
-        }
-        else {
+            echo $http_result;
+        } else {
+            echo "\n call Status : " . $result;
+            echo "\n";
+            echo $http_result;
             echo "\nFailed Calling the Number\n";
         }
-
         curl_close($ch);
     }
 }

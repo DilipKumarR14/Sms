@@ -5,6 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HttpURLConnectionExample",
+            "request": "launch",
+            "mainClass": "HttpURLConnectionExample"
+        },
+        {
             "name": "Listen for XDebug",
             "type": "php",
             "request": "launch",

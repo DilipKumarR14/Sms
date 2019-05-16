@@ -13,15 +13,15 @@ class SendSms
         fwrite($file, "Your OTP Number is $r");
         fclose($file);
         $post_data = array(
-            'From' => $objConst->from,
-            'To' => $objConst->to,
-            'Body' => "This is a test message being sent using Exotel with a (OTP) and ($r). If this is being abused, report to 08088919888"
+            'From' => "08660558202",
+            'To' => "8553790364",
+            'Body' => "This is a test message being sent using Exotel with a (OTP) and ($r) yeah!! report to 08088919888"
         );
         $exotel_sid = $objConst->exoId;
         $exotel_token = $objConst->exoToken;
         
         // post request
-        $url = "https://" . $exotel_sid . ":" . $exotel_token . "@twilix.exotel.in/v1/Accounts/" . $exotel_sid . "/Sms/send.json";
+$url = "http://" . $exotel_sid . ":" . $exotel_token . "@twilix.exotel.in/v1/Accounts/".$exotel_sid . "/Sms/send.json";
 
         $ch = curl_init();
 
@@ -34,10 +34,11 @@ class SendSms
         $decode = json_decode($http_result,true);
         
         // get request
+
         echo "\nWaiting for Response..\n";
-        sleep(5);
+        sleep(10);
         
-        $url = "https://" . $exotel_sid . ":" . $exotel_token . "@api.exotel.com/v1/Accounts/" . $exotel_sid . "/SMS/Messages/" . $decode["SMSMessage"]["Sid"] . ".json";
+        $url = "http://" . $exotel_sid . ":" . $exotel_token . "@twilix.exotel.com/v1/Accounts/" . $exotel_sid . "/SMS/Messages/" . $decode["SMSMessage"]["Sid"] . ".json";
 
         $ch = curl_init();// initialize the curl session
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -46,15 +47,18 @@ class SendSms
         $decode = json_decode($http_result, true);
 
         $resultStatus = $decode['SMSMessage']['Status'];
-
-        if ($resultStatus == "sent") {
+        
+        if ($resultStatus == "submitted") {
             echo "\nSMS Sent Successfully\n";
+            print_r($http_result);
+            echo "\n";
         } else {
             // call
             echo "\n SMS Sent Failed\n";
-            echo "\nCalling....\n";
-            $obj = new CallApi();
-            $obj->callApp();  
+            print_r($http_result);
+            echo "\n";
+            // $obj = new CallApi();
+            // $obj->callApp();  
     
         }
         curl_close($ch);
